@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyNinjaSpawner : MonoBehaviour
 {
     public GameObject EnemyNinja;
     public float timer = 0;
     public int spawnRate = 25;
+    public Text TempoJogo;
 
 
     private void Start()
@@ -31,6 +34,10 @@ public class EnemyNinjaSpawner : MonoBehaviour
 
         Instantiate(EnemyNinja, new Vector3(transform.position.x, transform.position.y, 0)
             , transform.rotation);
+        //if (TempoJogo.text <= 60)
+        
+
+        
         spawnRate = Random.Range(20, 30);
 
         // new Vector3 = necess�rio quando vou colocar meus n�meros no vetor
