@@ -1359,6 +1359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597646748}
   - component: {fileID: 1597646749}
+  - component: {fileID: 1597646750}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -1433,6 +1434,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1597646750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597646747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459f2835bb38c8d43aca5cd5e04358d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1597646749}
+  poseReto: {fileID: 21300000, guid: c14f683d752348f4daed1cc218ab8e53, type: 3}
+  poseCaindo: {fileID: 21300000, guid: f7c59805d28938647aed85d1742c1136, type: 3}
+  character: {fileID: 2040517622}
+  lado: 0
 --- !u!1 &1677498937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,3 +1893,5 @@ MonoBehaviour:
   counterclockwiseRotationSpeed: 100
   ninjaIsAlive: 1
   Base: {fileID: 83863480}
+  jumpStrength: 10
+  myRigidBody: {fileID: 2040517625}
