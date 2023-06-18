@@ -27,6 +27,8 @@ public class WindSpawnerScript : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+
             wind = Instantiate(windPrefab, transform.position, Quaternion.identity);
 
             areaEffector = wind.GetComponent<AreaEffector2D>();
@@ -56,8 +58,6 @@ public class WindSpawnerScript : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minLifetime, maxLifetime));
 
             Destroy(wind);
-
-            yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
         }
         
     }

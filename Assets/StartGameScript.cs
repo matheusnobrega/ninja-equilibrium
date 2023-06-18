@@ -9,4 +9,14 @@ public class StartGameScript : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void OnPlayReturnButton()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void OnHowToPlayButton()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 }
