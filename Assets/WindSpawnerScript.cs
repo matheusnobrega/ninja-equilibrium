@@ -31,9 +31,18 @@ public class WindSpawnerScript : MonoBehaviour
 
             areaEffector.forceMagnitude = Random.Range(minSpawnTime, maxSpawnTime);
 
-            // Generate a random number between 0 and 1
-            //            int randomNumber = Random.Next(0, 2);
-            areaEffector.forceAngle = Random.Range(minLifetime, maxLifetime);
+            int direction = Random.Range(0, 2);
+            if (direction == 0)
+            {
+                areaEffector.forceAngle = 0;
+            }
+            else
+            {
+                areaEffector.forceAngle = 180;
+            }
+            
+
+
 
             yield return new WaitForSeconds(Random.Range(minLifetime, maxLifetime));
 

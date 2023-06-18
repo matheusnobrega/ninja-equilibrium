@@ -617,8 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windPrefab: {fileID: 1588821686488676043, guid: 7ce4399a9993d554f845555198be1bc1, type: 3}
-  minSpawnTime: 1
-  maxSpawnTime: 3
+  minSpawnTime: 5
+  maxSpawnTime: 15
   minMagnitude: 1
   maxMagnitude: 10
   minLifetime: 1
