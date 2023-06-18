@@ -6,12 +6,12 @@ public class EnemyNinjaSpawner : MonoBehaviour
 {
     public GameObject EnemyNinja;
     public float timer = 0;
-    public int spawnRate = 5;
+    public int spawnRate = 25;
 
 
     private void Start()
     {
-        spawnNinja();
+        
     }
     private void Update()
     {
