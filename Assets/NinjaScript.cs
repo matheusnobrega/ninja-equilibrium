@@ -15,11 +15,13 @@ public class NinjaScript : MonoBehaviour
     public GameObject Base;
     public float jumpStrength;
     public Rigidbody2D myRigidBody;
+    public TimerScript timer;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         hingeJointBase = GetComponent<HingeJoint2D>();
         connectedBody = hingeJointBase.connectedBody;
+        //timer = GetComponent<TimerScript>();
     }
 
 
@@ -51,9 +53,7 @@ public class NinjaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
         {
-            logic.gameOver();
-            ninjaIsAlive = false;
-            Base.SetActive(false);
+            EndGame();
         }
             
     }
@@ -62,9 +62,15 @@ public class NinjaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Kunai(Clone)")
         {
-            logic.gameOver();
-            ninjaIsAlive = false;
-            Base.SetActive(false);
+            EndGame();
         }
+    }
+
+    private void EndGame()
+    {
+        logic.gameOver();
+        ninjaIsAlive = false;
+        Base.SetActive(false);
+        timer.stopTimer();
     }
 }
