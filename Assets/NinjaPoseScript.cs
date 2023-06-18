@@ -26,10 +26,12 @@ public class NinjaPoseScript : MonoBehaviour
             {
                 spriteRenderer.flipX = !spriteRenderer.flipX;
                 lado = 0;
-            }    
-            
-            
-        }else if(character.transform.position.x >= 2.3)
+            }
+            tamanho(0);
+
+
+        }
+        else if(character.transform.position.x >= 2.3)
         {
             spriteRenderer.sprite = poseCaindo;
             if (lado == 0)
@@ -37,10 +39,18 @@ public class NinjaPoseScript : MonoBehaviour
                 spriteRenderer.flipX = !spriteRenderer.flipX;
                 lado = 1;
             }
+            tamanho(1);
         }
         else
         {
             spriteRenderer.sprite = poseReto;
+            spriteRenderer.transform.localScale = new Vector3(1f, 1f, 1f);
         }
+    }
+
+    void tamanho(int lado)
+    {
+        spriteRenderer.transform.localScale = new Vector3(2f, 2f, 2f);
+        
     }
 }
