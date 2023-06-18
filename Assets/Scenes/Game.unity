@@ -1421,7 +1421,7 @@ MonoBehaviour:
   minSpawnTime: 5
   maxSpawnTime: 15
   minMagnitude: 0.5
-  maxMagnitude: 2
+  maxMagnitude: 1.5
   minLifetime: 1
   maxLifetime: 5
   destroyDelay: 5
