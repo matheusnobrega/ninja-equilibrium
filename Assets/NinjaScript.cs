@@ -11,6 +11,8 @@ public class NinjaScript : MonoBehaviour
     public float clockwiseRotationSpeed = 1f;
     public float counterclockwiseRotationSpeed = 1f;
     private Rigidbody2D connectedBody;
+    public bool ninjaIsAlive = true;
+    public GameObject Base;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -22,16 +24,18 @@ public class NinjaScript : MonoBehaviour
     void Update()
     {
         rotationInput = Input.GetAxis("Horizontal");
-
-        if (rotationInput != 0)
+        if (ninjaIsAlive)
         {
-            float targetAngularVelocity = (-1) * rotationInput * rotationSpeed;   // Movimentação do personagem
+            if (rotationInput != 0)
+            {
+                float targetAngularVelocity = (-1) * rotationInput * rotationSpeed;   // Movimentação do personagem
 
-            GetComponent<Rigidbody2D>().angularVelocity = targetAngularVelocity;
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                GetComponent<Rigidbody2D>().angularVelocity = targetAngularVelocity;
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().angularVelocity = 0f;
+            }
         }
     }
 
@@ -40,6 +44,8 @@ public class NinjaScript : MonoBehaviour
         if (collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
         {
             logic.gameOver();
+            ninjaIsAlive = false;
+            Base.SetActive(false);
         }
             
     }
