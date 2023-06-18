@@ -19,4 +19,13 @@ public class StartGameScript : MonoBehaviour
     {
         SceneManager.LoadScene("HowToPlay");
     }
+
+    public void OnQuitGameButton()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
+    }
 }
