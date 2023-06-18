@@ -8,6 +8,7 @@ public class WindSpawnerScript : MonoBehaviour
     private GameObject wind;
     private AreaEffector2D areaEffector;
     private SpriteRenderer spriteRenderer;
+    private Collider2D colliderBase;
     public float minSpawnTime = 5f;
     public float maxSpawnTime = 15f;
     public float minMagnitude = 1f;
@@ -34,11 +35,15 @@ public class WindSpawnerScript : MonoBehaviour
 
             spriteRenderer = wind.GetComponent<SpriteRenderer>();
 
+            colliderBase = wind.GetComponent<Collider2D>();
+
             int direction = Random.Range(0, 2);
             if (direction == 0)
             {
                 areaEffector.forceAngle = 0;
                 spriteRenderer.flipX = !spriteRenderer.flipX;
+                colliderBase.offset = new Vector2(-colliderBase.offset.x, colliderBase.offset.y);
+                wind.transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
             }
             else
             {
