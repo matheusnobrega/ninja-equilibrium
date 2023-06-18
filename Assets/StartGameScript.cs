@@ -15,6 +15,11 @@ public class StartGameScript : MonoBehaviour
         SceneManager.LoadScene("StartMenu");
     }
 
+    public void OnCreditsButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void OnHowToPlayButton()
     {
         SceneManager.LoadScene("HowToPlay");
