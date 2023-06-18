@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class PipeMiddleScript : MonoBehaviour
+public class SpawnerManagerScript : MonoBehaviour
 {
 
-    public PipeSpawnScript kunaiSpawner; // scipt pra spawnar kunais
+    public KunaiSpawner kunaiSpawner; // scipt pra spawnar kunais
     public WindSpawnerScript windSpawner;
     public float timer = 0;
     public int spawnRate = 10;
@@ -14,7 +14,7 @@ public class PipeMiddleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        kunaiSpawner = GameObject.FindGameObjectWithTag("KunaiSpawn").GetComponent<PipeSpawnScript>();
+        kunaiSpawner = GameObject.FindGameObjectWithTag("KunaiSpawn").GetComponent<KunaiSpawner>();
         windSpawner = GameObject.FindGameObjectWithTag("WindSpawn").GetComponent<WindSpawnerScript>();
 
         

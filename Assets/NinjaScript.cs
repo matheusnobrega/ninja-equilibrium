@@ -25,7 +25,7 @@ public class NinjaScript : MonoBehaviour
 
         if (rotationInput != 0)
         {
-            float targetAngularVelocity = rotationInput * rotationSpeed;
+            float targetAngularVelocity = (-1) * rotationInput * rotationSpeed;   // Movimentação do personagem
 
             GetComponent<Rigidbody2D>().angularVelocity = targetAngularVelocity;
         }
