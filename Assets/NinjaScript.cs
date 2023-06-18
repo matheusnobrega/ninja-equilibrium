@@ -16,6 +16,7 @@ public class NinjaScript : MonoBehaviour
     public float jumpStrength;
     public Rigidbody2D myRigidBody;
     public TimerScript timer;
+    public AudioSource caindooo;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -53,6 +54,7 @@ public class NinjaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
         {
+            caindooo.Play();
             EndGame();
         }
             
