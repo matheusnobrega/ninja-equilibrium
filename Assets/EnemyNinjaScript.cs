@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KunaiScript : MonoBehaviour
+public class EnemyNinjaScript : MonoBehaviour
 {
-
-    public float moveSpeed = 7;
-    public float deadZone = -45;    // limite da esquerda da tela, para deletar as kunais
+    public float moveSpeed = 50;
+    public float deadZone = 45;    // limite da esquerda da tela, para deletar as kunais
     
 
     // Start is called before the first frame update
@@ -18,14 +17,16 @@ public class KunaiScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += (Vector3.left * moveSpeed) * Time.deltaTime;
+        transform.position += (Vector3.right * moveSpeed) * Time.deltaTime;
 
-        if (transform.position.x < deadZone)
+        if (transform.position.x > deadZone)
         {
-            Debug.Log("Kunai Deleted");
+            Debug.Log("Enemy Ninja Deleted");
             Destroy(gameObject);
         }
 
         // Time.deltaTime = o c�lculo fica igual independente do frame rate
     }
+
+
 }
