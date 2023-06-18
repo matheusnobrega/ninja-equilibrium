@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeSpawnScript : MonoBehaviour
+public class KunaiSpawner : MonoBehaviour
 {
 
     public GameObject Kunai;
