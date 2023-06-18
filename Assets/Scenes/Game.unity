@@ -1776,3 +1776,5 @@ MonoBehaviour:
   rotationSpeed: 1000
   clockwiseRotationSpeed: 100
   counterclockwiseRotationSpeed: 100
+  ninjaIsAlive: 1
+  Base: {fileID: 83863480}
