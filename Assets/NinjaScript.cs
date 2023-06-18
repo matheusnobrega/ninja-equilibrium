@@ -13,6 +13,8 @@ public class NinjaScript : MonoBehaviour
     private Rigidbody2D connectedBody;
     public bool ninjaIsAlive = true;
     public GameObject Base;
+    public float jumpStrength;
+    public Rigidbody2D myRigidBody;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -36,6 +38,12 @@ public class NinjaScript : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().angularVelocity = 0f;
             }
+
+            //if (Input.GetKeyDown(KeyCode.Space) == true)
+            //{
+            //    myRigidBody.velocity = Vector2.up * jumpStrength;
+            //}
+
         }
     }
 
