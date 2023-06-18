@@ -5,17 +5,17 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     public float time = 0;
-    public bool TimerOn = false;
+    public bool timerOn = false;
 
     public Text TimerTxt;
 
     private void Start()
     {
-        TimerOn = true;
+        timerOn = true;
     }
     void Update()
     {
-        if (TimerOn)
+        if (timerOn)
         {
             time += Time.deltaTime;
             updateTimer(time);
@@ -30,5 +30,10 @@ public class TimerScript : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         TimerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds); 
+    }
+
+    public void stopTimer()
+    {
+        timerOn = false;
     }
 }
