@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KunaiSpawn
   - WindSpawn
+  - Logic
   layers:
   - Default
   - TransparentFX
