@@ -57,4 +57,14 @@ public class NinjaScript : MonoBehaviour
         }
             
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Kunai(Clone)")
+        {
+            logic.gameOver();
+            ninjaIsAlive = false;
+            Base.SetActive(false);
+        }
+    }
 }

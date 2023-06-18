@@ -7,6 +7,7 @@ public class KunaiScript : MonoBehaviour
 
     public float moveSpeed = 7;
     public float deadZone = -45;    // limite da esquerda da tela, para deletar as kunais
+    public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
