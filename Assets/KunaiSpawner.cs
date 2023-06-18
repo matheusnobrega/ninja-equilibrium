@@ -12,6 +12,7 @@ public class KunaiSpawner : MonoBehaviour
 
     private void Update()
     {
+        
         if (timer < spawnRate)
         {
             timer += Time.deltaTime;
@@ -27,6 +28,7 @@ public class KunaiSpawner : MonoBehaviour
 
         Instantiate(Kunai, new Vector3(transform.position.x, transform.position.y, 0)
             , transform.rotation);
+        spawnRate = Random.Range(5, 15);
 
         // new Vector3 = necess�rio quando vou colocar meus n�meros no vetor
         // transform.position.x = spawna em cima do spawner

@@ -15,7 +15,8 @@ public class EnemyNinjaSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (timer < spawnRate)
+        
+            if (timer < spawnRate)
         {
             timer += Time.deltaTime;
         }
@@ -30,6 +31,7 @@ public class EnemyNinjaSpawner : MonoBehaviour
 
         Instantiate(EnemyNinja, new Vector3(transform.position.x, transform.position.y, 0)
             , transform.rotation);
+        spawnRate = Random.Range(20, 30);
 
         // new Vector3 = necess�rio quando vou colocar meus n�meros no vetor
         // transform.position.x = spawna em cima do spawner
