@@ -1379,7 +1379,6 @@ MonoBehaviour:
   EnemyNinja: {fileID: 6469774809215603903, guid: eb1429dd4ceecef469b32800423c0820, type: 3}
   timer: 0
   spawnRate: 25
-  TempoJogo: {fileID: 0}
 --- !u!4 &1012651912
 Transform:
   m_ObjectHideFlags: 0
@@ -2282,7 +2281,6 @@ MonoBehaviour:
   Kunai: {fileID: 8556779920407447195, guid: 7947d2d51444d0a468ce960550528f8b, type: 3}
   timer: 0
   spawnRate: 10
-  TempoJogo: {fileID: 1962278647}
 --- !u!1 &1859011548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2668,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a452ded87a4c0234a8c517aeb6a91933, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
