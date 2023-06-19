@@ -8,7 +8,7 @@ public class KunaiSpawner : MonoBehaviour
     public GameObject Kunai;
     public float timer = 0;
     public int spawnRate = 10;
-    public GameObject TempoJogo;
+    
 
 
     private void Update()
