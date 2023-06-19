@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
     public float time = 0;
     public bool timerOn = false;
+
 
     public Text TimerTxt;
 
@@ -17,8 +19,16 @@ public class TimerScript : MonoBehaviour
     {
         if (timerOn)
         {
-            time += Time.deltaTime;
-            updateTimer(time);
+            if (time < 180) 
+            {
+                time += Time.deltaTime;
+                updateTimer(time);
+            }
+            else
+            {
+                WinSceneChange();
+            }
+            
         }
     }
 
@@ -35,5 +45,10 @@ public class TimerScript : MonoBehaviour
     public void stopTimer()
     {
         timerOn = false;
+    }
+
+    public void WinSceneChange()
+    {
+        SceneManager.LoadScene("WinGame");
     }
 }

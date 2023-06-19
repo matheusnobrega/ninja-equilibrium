@@ -25,6 +25,11 @@ public class StartGameScript : MonoBehaviour
         SceneManager.LoadScene("HowToPlay");
     }
 
+    public void OnStartButton()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void OnQuitGameButton()
     {
         #if UNITY_EDITOR
