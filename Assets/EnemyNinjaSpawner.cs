@@ -9,7 +9,7 @@ public class EnemyNinjaSpawner : MonoBehaviour
     public GameObject EnemyNinja;
     public float timer = 0;
     public int spawnRate = 25;
-    public Text TempoJogo;
+    
 
 
     private void Start()

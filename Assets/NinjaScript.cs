@@ -17,6 +17,7 @@ public class NinjaScript : MonoBehaviour
     public Rigidbody2D myRigidBody;
     public TimerScript timer;
     public AudioSource caindooo;
+    public AudioSource acertado;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -42,10 +43,7 @@ public class NinjaScript : MonoBehaviour
                 GetComponent<Rigidbody2D>().angularVelocity = 0f;
             }
 
-            //if (Input.GetKeyDown(KeyCode.Space) == true)
-            //{
-            //    myRigidBody.velocity = Vector2.up * jumpStrength;
-            //}
+            
 
         }
     }
@@ -64,6 +62,7 @@ public class NinjaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Kunai(Clone)")
         {
+            acertado.Play();
             EndGame();
         }
     }
